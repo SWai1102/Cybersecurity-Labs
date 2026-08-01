@@ -1,0 +1,26 @@
+=== Current User ===
+sam
+
+=== Hostname ===
+LAPTOP-FDS7BF6R
+
+=== User Identity ===
+uid=1000(sam) gid=1000(sam) groups=1000(sam),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users)
+
+=== Kernel ===
+Linux LAPTOP-FDS7BF6R 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+
+=== Operating System ===
+PRETTY_NAME="Ubuntu 26.04 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04 (Resolute Raccoon)"
+VERSION_CODENAME=resolute
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=resolute
+LOGO=ubuntu-logo
