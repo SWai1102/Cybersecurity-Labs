@@ -34,3 +34,15 @@ Regular account, privilege, and patch reviews help reduce unauthorized access, p
 - [ ] Firewall configuration
 - [ ] Authentication log analysis
 - [ ] SSH hardening
+
+## File Permission Audit
+
+Three test files were configured with different access levels:
+
+| File | Permission | Security purpose |
+|---|---:|---|
+| `public.txt` | `644` | Owner can modify; other users can only read |
+| `private.txt` | `600` | Only the owner can read and modify |
+| `script.sh` | `700` | Only the owner can read, modify, and execute |
+
+Removing the execute permission from `script.sh` prevented the script from running, demonstrating how Linux permissions control program execution.

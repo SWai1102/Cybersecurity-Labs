@@ -1,0 +1,3 @@
+-rw-r--r-- 644 public.txt
+-rw------- 600 private.txt
+-rwx------ 700 script.sh

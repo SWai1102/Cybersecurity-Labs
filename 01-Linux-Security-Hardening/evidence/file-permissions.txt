@@ -1,0 +1,4 @@
+total 4
+-rw------- 1 sam sam  0 Aug  2 19:07 private.txt
+-rw-r--r-- 1 sam sam  0 Aug  2 19:07 public.txt
+-rwx------ 1 sam sam 46 Aug  2 19:09 script.sh
