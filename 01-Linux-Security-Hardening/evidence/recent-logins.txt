@@ -1,0 +1,3 @@
+wtmpdb has no entries
+
+“WSL does not always generate traditional login records in the same way as a full Ubuntu Server environment.”

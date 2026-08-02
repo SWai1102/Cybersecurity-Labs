@@ -1,0 +1,4 @@
+Aug 02 23:36:28 LAPTOP-FDS7BF6R sshd-session[6142]: Accepted password for sam from 172.25.64.1 port 52075 ssh2
+Aug 02 23:36:28 LAPTOP-FDS7BF6R sshd-session[6142]: pam_unix(sshd:session): session opened for user sam(uid=1000) by sam(uid=0)
+Aug 02 23:40:55 LAPTOP-FDS7BF6R sshd-session[6391]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.25.64.1  user=sam
+Aug 02 23:40:57 LAPTOP-FDS7BF6R sshd-session[6391]: Failed password for sam from 172.25.64.1 port 61463 ssh2

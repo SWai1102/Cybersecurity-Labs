@@ -72,3 +72,37 @@ The services were primarily bound to loopback or WSL internal addresses. No unne
 ## Security Finding
 
 The system follows a default-deny inbound policy and currently has no unnecessary inbound firewall exceptions, reducing its exposed attack surface.
+
+## Authentication Log Analysis
+
+A temporary OpenSSH Server was configured to generate and review real authentication events.
+
+### Test activities
+
+- Started the SSH service
+- Temporarily allowed TCP port 22 through UFW
+- Performed one successful SSH login
+- Performed one failed password authentication
+- Reviewed successful login history using `last`
+- Reviewed SSH authentication events using `journalctl`
+- Removed the firewall exception
+- Disabled and stopped the SSH service after testing
+
+### Findings
+
+The successful login record identified:
+
+- User: `sam`
+- Authentication method: password
+- Source address: WSL host-side virtual network
+- Session duration: approximately one minute
+
+The failed authentication event recorded an incorrect password attempt for the same user and source address.
+
+### Security relevance
+
+SSH authentication logs can help identify unauthorized access attempts, password-guessing activity, suspicious source addresses, and unexpected successful sessions.
+
+### Remediation
+
+The temporary SSH firewall rule was removed and the SSH service was disabled after completing the test to avoid leaving an unnecessary network service exposed.

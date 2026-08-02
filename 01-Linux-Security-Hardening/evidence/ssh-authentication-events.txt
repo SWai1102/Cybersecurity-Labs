@@ -1,0 +1,13 @@
+Aug 02 23:34:01 LAPTOP-FDS7BF6R systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Aug 02 23:34:01 LAPTOP-FDS7BF6R sshd[5866]: Server listening on 0.0.0.0 port 22.
+Aug 02 23:34:01 LAPTOP-FDS7BF6R sshd[5866]: Server listening on :: port 22.
+Aug 02 23:34:01 LAPTOP-FDS7BF6R systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Aug 02 23:36:28 LAPTOP-FDS7BF6R sshd-session[6142]: Accepted password for sam from 172.25.64.1 port 52075 ssh2
+Aug 02 23:36:28 LAPTOP-FDS7BF6R sshd-session[6142]: pam_unix(sshd:session): session opened for user sam(uid=1000) by sam(uid=0)
+Aug 02 23:40:55 LAPTOP-FDS7BF6R sshd-session[6391]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.25.64.1  user=sam
+Aug 02 23:40:57 LAPTOP-FDS7BF6R sshd-session[6391]: Failed password for sam from 172.25.64.1 port 61463 ssh2
+Aug 02 23:41:01 LAPTOP-FDS7BF6R sshd-session[6391]: Connection reset by authenticating user sam 172.25.64.1 port 61463 [preauth]
+Aug 02 23:42:49 LAPTOP-FDS7BF6R systemd[1]: Stopping ssh.service - OpenBSD Secure Shell server...
+Aug 02 23:42:49 LAPTOP-FDS7BF6R sshd[5866]: Received signal 15; terminating.
+Aug 02 23:42:49 LAPTOP-FDS7BF6R systemd[1]: ssh.service: Deactivated successfully.
+Aug 02 23:42:49 LAPTOP-FDS7BF6R systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
