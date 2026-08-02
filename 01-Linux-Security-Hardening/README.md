@@ -30,7 +30,7 @@ Regular account, privilege, and patch reviews help reduce unauthorized access, p
 - [x] User and group review
 - [x] Login-capable account review
 - [x] Sudo privilege review
-- [ ] File permission audit
+- [x] File permission audit
 - [ ] Firewall configuration
 - [ ] Authentication log analysis
 - [ ] SSH hardening
