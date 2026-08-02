@@ -49,15 +49,26 @@ Removing the execute permission from `script.sh` prevented the script from runni
 
 ## Firewall Configuration
 
-UFW was configured using a default-deny inbound policy and a default-allow outbound policy.
+UFW was enabled with the following default policies:
 
-### Applied policy
+- Incoming traffic: denied
+- Outgoing traffic: allowed
+- Routed traffic: disabled
+- Logging level: low
 
-- Incoming connections: denied by default
-- Outgoing connections: allowed by default
-- Only explicitly required ports should be permitted
-- A temporary SSH rule was created and removed to demonstrate firewall rule management
+A temporary TCP port 22 rule was created and removed to demonstrate firewall rule management. No inbound ports were left unnecessarily exposed.
 
-### Security relevance
+## Listening Port Review
 
-A default-deny inbound policy reduces the attack surface by preventing unsolicited access to services unless they have been explicitly approved.
+The `ss -tulpn` command was used to identify listening network services.
+
+Observed services included:
+
+- DNS resolution on port 53 through the WSL/systemd-resolved environment
+- Local time synchronization through chronyd on UDP port 323
+
+The services were primarily bound to loopback or WSL internal addresses. No unnecessary service was observed listening on all external interfaces.
+
+## Security Finding
+
+The system follows a default-deny inbound policy and currently has no unnecessary inbound firewall exceptions, reducing its exposed attack surface.
