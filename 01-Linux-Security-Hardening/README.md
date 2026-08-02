@@ -31,7 +31,7 @@ Regular account, privilege, and patch reviews help reduce unauthorized access, p
 - [x] Login-capable account review
 - [x] Sudo privilege review
 - [x] File permission audit
-- [ ] Firewall configuration
+- [x] Firewall configuration
 - [ ] Authentication log analysis
 - [ ] SSH hardening
 
@@ -46,3 +46,18 @@ Three test files were configured with different access levels:
 | `script.sh` | `700` | Only the owner can read, modify, and execute |
 
 Removing the execute permission from `script.sh` prevented the script from running, demonstrating how Linux permissions control program execution.
+
+## Firewall Configuration
+
+UFW was configured using a default-deny inbound policy and a default-allow outbound policy.
+
+### Applied policy
+
+- Incoming connections: denied by default
+- Outgoing connections: allowed by default
+- Only explicitly required ports should be permitted
+- A temporary SSH rule was created and removed to demonstrate firewall rule management
+
+### Security relevance
+
+A default-deny inbound policy reduces the attack surface by preventing unsolicited access to services unless they have been explicitly approved.
